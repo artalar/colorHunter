@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html onmousedown = "userMove()">
+	<head>
+		<meta charset="utf-8">
+		<title>COLOR HUNTER</title>
+	</head>
+	<body>
+		<div id="rootField">
+			
+			<div id="score" style="text-align: center; font-size: 1.5vh;"></div>
+			<div id="resultColorFields" class="groupField">
+				<div id="firstTargetField" class="insideField"></div>
+				<div id="secondTargetField" class="insideField"></div>
+				<div id="thirdTargetField" class="insideField"></div>
+			</div>
+			
+			<div id="activeColorFields" class="groupField">
+				<div id="firstActiveField" class="insideField"></div>
+				<div id="secondActiveField" class="insideField"></div>
+			</div>
+			
+			<div id="dynamicColorFields" class="groupField">
+				<div id="firstDynamicField" class="insideField"></div>
+				<div id="secondDynamicField" class="insideField"></div>
+			</div>
+		
+		</div>
+		<style>
+			.groupField{
+				position: absolute;
+				background: #EEE;
+				height: 30vh;
+				width: 30vh;
+			}
+			.insideField{
+				position: absolute;
+				background: #DDD;
+				height: 100%;
+				width: 0%;
+				text-align: center;
+				/*font-size: 3vh;*/
+			}
+			#rootField{
+				margin: auto;
+				border: 0;
+				width: 30vh;
+			}
+			#resultColorFields{
+				top: 3vh;
+			}
+			#thirdTargetField{
+				height: 1.5rem;
+				width: 100%;
+				top: 20%;
+				background: rgba(0,0,0,0);
+			}
+			#activeColorFields{
+				top: 36vh;
+			}
+			#dynamicColorFields{
+				top: 69vh;
+			}
+		</style>
+		
+		<script src='Data.js'></script>
+		<script src="Interface.js" onload="(new CreateLevel).first()"></script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+
+        <style type="text/css">
+            div{
+                width: 20vmin;
+                height: 20vmin;
+                background: #AAA;
+            }
+        </style>
+    </body>
+    <script src="Q:\code\personal\CH\test\colorMixer.js"></script>
+    <script>
+        let elem = document.getElementsByTagName("div");
+
+        let c1, c2;
+        
+        setColor(elem[0], c1 = createColor(128,2,200));
+        setColor(elem[2], c2 = createColor(170,2,20));
+        let color = mix([c1, c2])
+        setColor(elem[1], createColor(color[0], color[1], color[2]));
+    </script>
+
+</html>
